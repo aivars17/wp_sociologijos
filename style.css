@@ -355,50 +355,50 @@ section.study_index .icon-holder img{
   width: 80px;
   /*height: 80px;*/
 }
-section.blog .img{
+section.blog_index .img{
           background-repeat: no-repeat;
           background-position: top;
           width: 100%;
           margin: 0 auto;
-          background-size: auto;
+          background-size: 100% auto;
 
 }
-section.blog .img-holder{
+section.blog_index .img-holder{
   text-align: center;
 }
-section.blog .blog-header{
+section.blog_index .blog-header{
   padding: 50px 0px;
 }
-section.blog .blog-header h1{
+section.blog_index .blog-header h1{
   display: inline-block;
   color: #fff;
   font-weight: 600;
 }
-section.blog .text{
+section.blog_index .text{
   color: #fff;
   font-weight: 300;
 }
-section.blog .text h6{
+section.blog_index .text h6{
   border-top: 1px solid #fff;
   padding: 15px 0px;
   font-weight: 300;
 
 }
-section.blog .text h2{
+section.blog_index .text h2{
   font-weight: 300;
   padding: 15px 0px;
   font-size: 24px;
 }
-section.blog .text p{
+section.blog_index .text p{
   font-size: 18px;
   font-weight: 300;
 
 }
 
-section.blog .blog-more{
+section.blog_index .blog-more{
   margin: 60px 0;
 }
-section.blog .blog-more a{
+section.blog_index .blog-more a{
   color: #fff;
 }
 
