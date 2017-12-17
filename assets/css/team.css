@@ -1,0 +1,147 @@
+
+section.hero{
+      background-image: url('../img/teamH.png');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: top;
+      height: 418px;
+      max-width: 2000px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+}
+section.hero .hero-text{
+  display: block;
+  margin: auto;
+  color: #fff;
+  text-align: center;
+}
+.hero-text h1{
+  font-size: 50px;
+}
+section.team{
+  background-color: #fff;
+}
+section.team .team-box{
+  margin-top: 150px;
+}
+section.team .img-team img{
+  position: absolute;
+  top: 65px;
+  left: -80px;
+  width: 220px;
+  height: 215px;
+}
+section.team .text-team h4{
+  padding-bottom: 15px;
+}
+section.team .text-team p{
+  line-height: 2em;
+}
+section.team .text-team{
+  color: #fff;
+  background-color: #4E4D5C;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  padding-left: 200px;
+  padding-right: 60px;
+}
+section.team .img-team2 img{
+  position: absolute;
+  top: 65px;
+  right: -80px;
+  width: 220px;
+  height: 215px;
+}
+section.team .text-team2{
+  color: #fff;
+  background-color: #333338;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  padding-left: 60px;
+  padding-right: 200px;
+}
+section.team .text-team2 h4{
+  padding-bottom: 15px;
+}
+section.team .text-team2 p{
+  line-height: 2em;
+}
+section.team .team-mobile{
+  padding: 0px;
+}
+section.contacts{
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 990px){
+  section.hero{
+        background-image: url('../img/teamH.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: 2000px;
+        width: 100%;
+        display: flex;
+  }
+  .hero-text{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+  }
+  section.team .team-box{
+    margin-top: 50px;
+  }
+  section.team .img-team img{
+    top: 60px;
+    left: 25px;
+    z-index: 999;
+  }
+  section.team .text-team{
+    padding: 20px 20px;
+    padding-left: 240px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+
+  }
+  section.team .img-team2 img{
+    top: 60px;
+    right: 25px;
+    z-index: 999;
+
+  }
+  section.team .text-team2{
+    padding: 20px 20px;
+    padding-right: 240px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  section.contacts{
+    margin-top: 50px;
+  }
+
+}
+@media screen and (max-width:560px){
+  section.team .img-team img{
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  section.team .text-team{
+    padding: 20px 20px;
+  }
+  section.team .img-team2 img{
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  section.team .text-team2{
+    padding: 20px 20px;
+  }
+  section.team .team-box{
+    padding: 0px !important;
+    margin-top: 0px;
+  }
+
+}

@@ -1,0 +1,60 @@
+body{
+    width: 349px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.registration{
+    width: 249px;
+}
+
+.headline-registration{
+    width: 249px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.headline-registration h1{
+    font-family: Raleway;
+    font-weight: 550;
+    font-size: 30px;
+    color:#303030;
+}
+
+.headline-registration i{
+    color: #ffbe08;
+    margin-left:15px;
+    text-shadow: 1px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+form{
+    font-size: 12px;
+    font-family: Raleway;
+    font-weight: 400;
+}
+input{
+    width: 249px;
+    height: 25px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+span{
+    color: #ffbe08;
+}
+
+.button-send{
+    text-align: center;  
+}
+
+button{
+    width: 115px;
+    height: 25px;
+    background-color: #ffbe08;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}

@@ -1,0 +1,74 @@
+body{
+    width: 349px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.gradient{
+    display: flex;
+    justify-content: center;
+    width: 349px;
+    height: 520px;
+    background: -moz-linear-gradient(45deg, rgba(77,76,90,1) 0%, rgba(52,52,58,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(77,76,90,1)), color-stop(100%, rgba(52,52,58,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(77,76,90,1) 0%, rgba(52,52,58,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(77,76,90,1) 0%, rgba(52,52,58,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(77,76,90,1) 0%, rgba(52,52,58,1) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(77,76,90,1) 0%, rgba(52,52,58,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34343a', endColorstr='#4d4c5a',GradientType=1 ); /* ie6-9 */}
+.registration{
+    width: 249px;
+}
+
+.headline-registration{
+    width: 249px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.headline-registration h1{
+    font-family: Raleway;
+    font-weight: 550;
+    font-size: 30px;
+    color:#fff;
+}
+
+.headline-registration i{
+    color: #ffbe08;
+    margin-left:15px;
+    text-shadow: 1px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+form{
+    font-size: 12px;
+    font-family: Raleway;
+    font-weight: 400;
+    color: #94989a;
+}
+input{
+    width: 249px;
+    height: 25px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+span{
+    color: #ffbe08;
+}
+
+.button-send{
+    text-align: center;  
+}
+
+button{
+    width: 115px;
+    height: 25px;
+    background-color: #ffbe08;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}

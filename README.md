@@ -1,2 +1,2 @@
-# wp_socialogijos
+# wp_sociologijos
 wordpress theme

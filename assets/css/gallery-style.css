@@ -1,0 +1,48 @@
+section.gallery-hero {
+    background: url("../img/gallery-background.png") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+section.gallery-hero h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 150px 0;
+    font-size: 50px;
+}
+section.gallery-hero a {
+    margin: 0 20px;
+    color: #fff;    
+}
+section.gallery-hero a:hover {
+    text-decoration: none;    
+}
+section.year {
+    margin-bottom: 50px;
+}
+section.year h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+section.year h5, hr {
+    margin: 40px 10px;
+}
+section.year hr.hr-short {
+    width: 70%;
+    margin: 40px auto;
+}
+section.year .photo {
+    margin: 10px;
+}
+@media screen and (max-width: 768px) {
+    section.year .photo-block {
+        text-align: center;
+    }
+    section.year .photo {
+        margin: 10px 0;
+    }
+}
