@@ -35,16 +35,16 @@
 function theme_sociology_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.css',false,'4.1','all');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/404.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/blog-style.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/events.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/gallery-style.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/interview-style.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/registracija-balta.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/registracija-juoda.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/sociologijos.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/studies.css');
-    wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/team.css');
+    wp_enqueue_style( '404_css', get_template_directory_uri() . '/assets/css/404.css',false,'4.0','all');
+    wp_enqueue_style( 'blog_css', get_template_directory_uri() . '/assets/css/blog-style.css',false,'4.0','all');
+    wp_enqueue_style( 'events_css', get_template_directory_uri() . '/assets/css/events.css',false,'4.0','all');
+    wp_enqueue_style( 'gallery_css', get_template_directory_uri() . '/assets/css/gallery-style.css',false,'4.0','all');
+    wp_enqueue_style( 'interview_css', get_template_directory_uri() . '/assets/css/interview-style.css',false,'4.0','all');
+    wp_enqueue_style( 'balta_css', get_template_directory_uri() . '/assets/css/registracija-balta.css',false,'4.0','all');
+    wp_enqueue_style( 'juoda_css', get_template_directory_uri() . '/assets/css/registracija-juoda.css',false,'4.0','all');
+    wp_enqueue_style( 'sociologijos_css', get_template_directory_uri() . '/assets/css/sociologijos.css');
+    wp_enqueue_style( 'studies_css', get_template_directory_uri() . '/assets/css/studies.css');
+    wp_enqueue_style( 'team_css', get_template_directory_uri() . '/assets/css/team.css');
     wp_enqueue_script( 'script', 'https://use.fontawesome.com/da7d68fc96.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'jQuery_js', 'https://code.jquery.com/jquery-3.2.1.slim.min.js');
     wp_enqueue_script( 'pooper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js');

@@ -41,19 +41,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 480px; }
-  body .about {
+  body .about_s {
     padding: 100px 0;
     min-height: 570px; }
-    body .about p {
+    body .about_s p {
       max-width: 350px;
       margin-left: 30px; }
-    body .about a {
+    body .about_s a {
       text-decoration: none;
       float: right;
       color: #333338;
       margin-right: 89px;
       font-size: 15px; }
-    body .about .read-more {
+    body .about_s .read-more {
       color: #000;
       font-weight: bold; }
   body .rotated-about {

@@ -52,10 +52,3 @@
       </div>
     </ul>
     </nav>
-<section class="hero">
-  <div class="hero-text">
-    <h1>SOCIOLOGIJOS AKADEMIJA</h1>
-  </div>
-  <div class="hero-line">
-  </div>
-</section>

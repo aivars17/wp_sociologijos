@@ -15,9 +15,14 @@
  */
 
 get_header(); ?>
-?>
-
-<section class="about">
+<section class="hero__index">
+  <div class="hero-text__index">
+    <h1>SOCIOLOGIJOS AKADEMIJA</h1>
+  </div>
+  <div class="hero-line__index">
+  </div>
+</section>
+<section class="about__index">
   <div class="header-mobile">
     <img class="dot" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/yDot.png" alt="">
     <!-- <i class="fa fa-circle fa-3x costum-circle" aria-hidden="true"></i> -->
@@ -34,7 +39,7 @@ get_header(); ?>
         </div>
         </div>
       <div class="col-lg-6 col-md-12">
-        <div class="about-text">
+        <div class="about-text__index">
           Sociologijos akademija - Neformali
           organizacija, siekianti parodyti moksleiviams
           kasdienio gyvenimo aspektus iš sociologijos
@@ -50,7 +55,7 @@ get_header(); ?>
   </div>
 
 </section>
-<section class="team">
+<section class="team_index">
   <div class="team-line">
 
   </div>
@@ -231,7 +236,7 @@ get_header(); ?>
 </div>
 </section>
 
-<section class="study">
+<section class="study_index">
   <div class="container">
     <div class="study-circle">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bDot.png" alt="">

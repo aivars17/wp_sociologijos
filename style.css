@@ -15,6 +15,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 body{
   font-family: 'Raleway', sans-serif;
+
 }
 .bg-yellow{
   background-color: #ffbe08;
@@ -64,7 +65,7 @@ nav .logo-holder img{
 .navbar-light .navbar-toggler{
   border: none;
 }
-.hero{
+.hero__index{
       background-image: url('assets/img/slice12.jpg');
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -72,15 +73,15 @@ nav .logo-holder img{
       height: 550px;
       margin: 0 auto;
 }
-.hero-text{
+.hero-text__index{
   display: none;
   color: #fff;
   text-align: center;
 }
-section.about{
+section.about__index{
   padding: 50px 0;
 }
-section.about .costum-circle-top{
+section.about__index .costum-circle-top{
   display: none;
 }
 .rotated-about{
@@ -103,28 +104,28 @@ section.about .costum-circle-top{
 /* Internet Explorer */
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
-section.about .header-mobile{
+section.about__index .header-mobile{
   display: none;
 }
-section.about .header-mobile i{
+section.about__index .header-mobile i{
   margin-right: 5px;
 }
-section.about .about-text{
+section.about__index .about-text_index{
   margin-top: 10px;
   text-align: left;
 }
-section.about .about-more{
+section.about__index .about-more{
   padding: 50px 0;
   text-align: right;
   margin-left: 100px;
 }
-section.about .about-more a{
+section.about__index .about-more a{
   font-weight: 600;
   color: #333338;
   text-decoration: none;
 
 }
-section.about .about-more span{
+section.about__index .about-more span{
   font-weight: 300;
   color: #333338;
   text-decoration: none;
@@ -139,7 +140,7 @@ section.about .about-more span{
   float: left;
   max-width:300px;
 }
-section.team {
+section.team_index {
   background-color: #FFBE08;
 }
 section.team .team-header{
@@ -149,16 +150,16 @@ section.team .team-header{
   padding-top: 0px;
   margin-top: 30px;
 }
-section.team .team-header i{
+section.team_index .team-header i{
   padding-right: 5px;
   color: #333338;
 }
-section.team .team-text{
+section.team_index .team-text{
   margin-top: -90px;
   background-color: #333338;
   color: #fff;
 }
-section.team .team-text h4{
+section.team_index .team-text h4{
   line-height: 0px;
   margin-top: 65px;
   margin-bottom: 0px;
@@ -166,44 +167,44 @@ section.team .team-text h4{
   padding-left: 65px;
   padding-bottom: 0px;
 }
-section.team .team-text span{
+section.team_index .team-text span{
   position: absolute;
   margin-top: 73px;
   font-size: 150px;
   margin-left: -62px;
   color: #FFBE08;
 }
-section.team .team-text p{
+section.team_index .team-text p{
   margin-top: 0px;
   text-align: right;
   padding-right: 65px;
   padding-left: 50px;
 }
-section.team .team-text hr{
+section.team_index .team-text hr{
   width: 80%;
   background-color: lightgrey;
 }
-section.team .img-holder{
+section.team_index .img-holder{
   margin-top: -50px;
 }
 
-section.team .icon-holder{
+section.team_index .icon-holder{
   /*padding-top: 100px;*/
   text-align: center;
 }
-section.team .icon-holder-left{
+section.team_index .icon-holder-left{
   /*padding-top: 100px;*/
   padding-left: 5px;
 }
 
-section.team .team-name{
+section.team_index .team-name{
   height: 53px;
   line-height: 53px;
   padding-left: 10px;
   background-color: #333338;
   color: #fff;
 }
-section.team .team-more{
+section.team_index .team-more{
   text-align: right;
   padding: 50px 0;
 }
@@ -301,12 +302,12 @@ section.gallery .gallery-more{
 section.gallery .gallery-more a{
   color: #333338;
 }
-section.study{
+section.study_index{
   margin-top: 100px;
   background-color: #FFBE08;
   padding: 100px 0;
 }
-section.study .rotated-study{
+section.study_index .rotated-study{
   float: left;
   text-align: right;
   position: absolute;
@@ -327,29 +328,29 @@ section.study .rotated-study{
 /* Internet Explorer */
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
-section.study .rotated-study i{
+section.study_index .rotated-study i{
   color: #333338;
   padding-right: 5px;
 }
-section.study .rotated-study h1{
+section.study_index .rotated-study h1{
   color: #fff;
   font-weight: 600;
 }
-section.study .icon-holder{
+section.study_index .icon-holder{
   text-align: center;
 }
-section.study .icon-text{
+section.study_index .icon-text{
   text-align: center;
 
 }
-section.study .icon-text h3{
+section.study_index .icon-text h3{
   padding: 20px;
   font-weight: 300;
 }
-section.study .icon-text h5{
+section.study_index .icon-text h5{
   font-weight: 300;
 }
-section.study .icon-holder img{
+section.study_index .icon-holder img{
   text-align: center;
   width: 80px;
   /*height: 80px;*/
@@ -453,7 +454,7 @@ section.contacts p{
   padding-top: 20px;
   font-weight: 300;
 }
-section.study .study-circle{
+section.study_index .study-circle{
   display: none;
   color: black;
 }
