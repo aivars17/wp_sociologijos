@@ -34,6 +34,7 @@
  */
 function theme_sociology_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_script( 'script', 'https://use.fontawesome.com/da7d68fc96.js', array ( 'jquery' ), 1.1, true);
     
 }
 add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );

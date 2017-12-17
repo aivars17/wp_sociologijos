@@ -65,7 +65,7 @@ nav .logo-holder img{
   border: none;
 }
 .hero{
-      background-image: url('../img/slice12.jpg');
+      background-image: url('assets/img/slice12.jpg');
       background-size: 100% auto;
       background-repeat: no-repeat;
       background-position: top;

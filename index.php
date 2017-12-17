@@ -13,76 +13,13 @@
  * @subpackage Sociology
  * @since Sociology 0.1
  */
+
+get_header(); ?>
 ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sociologija</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
-    <script src="https://use.fontawesome.com/da7d68fc96.js"></script>
-    <?php wp_head(); ?>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-yellow">
-      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-md-auto mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              APIE
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">RENGINIAI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">GALERIJA</a>
-          </li>
-          <li class="nav-item d-none d-lg-block">
-            <a class="nav-link logo-link" href="#">
-              <div class="logo-holder">
-                <img src='<?php echo get_template_directory_uri();?>/assets/img/logo.png' alt="">
-              </div>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="study.html">STUDIJOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">BLOGAS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ATSILIEPIMAI</a>
-          </li>
-      </div>
-      <div class="registration-block hidden-dm-down d-none d-lg-block">
-        <a href="#">REGISTRUOKIS</a>
-      </div>
-    </ul>
-    </nav>
-<section class="hero">
-  <div class="hero-text">
-    <h1>SOCIOLOGIJOS AKADEMIJA</h1>
-  </div>
-  <div class="hero-line">
-
-  </div>
-</section>
 <section class="about">
   <div class="header-mobile">
-    <img class="dot" src="assets/img/yDot.png" alt="">
+    <img class="dot" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/yDot.png" alt="">
     <!-- <i class="fa fa-circle fa-3x costum-circle" aria-hidden="true"></i> -->
     <h1>APIE</h1>
   </div>
@@ -93,7 +30,7 @@
           <h1>APIE<i class="fa fa-circle" aria-hidden="true"></i></h1>
         </div>
         <div class="video-holder">
-          <img class="img-fluid" src="assets/img/team_img.png"  alt="" data-toggle="modal" data-target=".video-modal">
+          <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img.png"  alt="" data-toggle="modal" data-target=".video-modal">
         </div>
         </div>
       <div class="col-lg-6 col-md-12">
@@ -147,17 +84,17 @@
     </div>
     <div class="col-lg-2 col-md-12 d-none d-lg-block">
       <div class="img-holder">
-        <img class="img-fluid" src="assets/img/team_img3.png" alt="">
+        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img3.png" alt="">
       </div>
     </div>
     <div class="col-lg-2 col-md-12 d-none d-lg-block">
       <div class="img-holder">
-        <img class="img-fluid " src="assets/img/team_img2.png" alt="">
+        <img class="img-fluid " src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img2.png" alt="">
       </div>
     </div>
     <div class="col-lg-2 col-6">
       <div id="img-active" class="img-holder">
-        <img class="img-fluid" src="assets/img/team_img.png" alt="">
+        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img.png" alt="">
       </div>
       <div class="team-name img-fluid">
         AISTE
@@ -194,7 +131,7 @@
   <div class="row">
     <div class="col-xl-4 col-md-12">
       <div class="img-holder">
-        <img class="img-fluid" src="assets/img/event1.png" alt="">
+        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/event1.png" alt="">
       </div>
       <div class="events-text img-fluid">
         <div class="img-header">
@@ -213,7 +150,7 @@
     </div>
     <div class="col-xl-4 col-md-12">
       <div class="img-holder">
-        <img class="img-fluid" src="assets/img/event2.png" alt="">
+        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/event2.png" alt="">
       </div>
       <div class="events-text img-fluid">
         <div class="img-header">
@@ -232,7 +169,7 @@
     </div>
     <div class="col-xl-4 col-md-12">
       <div class="img-holder">
-        <img class="img-fluid" src="assets/img/event3.png" alt="">
+        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/event3.png" alt="">
       </div>
       <div class="events-text img-fluid">
         <div class="img-header">
@@ -276,15 +213,15 @@
   <div class="row justify-content-center">
     <div class="col-6 ">
       <div class="gallery-img">
-        <img src="assets/img/gallery1.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery1.png" alt="">
       </div>
       <div class="gallery-img">
-        <img src="assets/img/gallery2.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery2.png" alt="">
       </div>
     </div>
     <div class="col-6">
       <div class="gallery-img gallery-img-long">
-        <img src="assets/img/gallery3.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery3.png" alt="">
       </div>
     </div>
   </div>
@@ -297,7 +234,7 @@
 <section class="study">
   <div class="container">
     <div class="study-circle">
-      <img src="assets/img/bDot.png" alt="">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bDot.png" alt="">
       <!-- <i class="fa fa-circle fa-3x costum-circle" aria-hidden="true"></i> -->
       <h1>STUDIJOS</h1>
       <!-- <i class="fa fa-circle fa-3x costum-circle" aria-hidden="true"></i> -->
@@ -309,7 +246,7 @@
             <h1>STUDIJOS<i class="fa fa-circle" aria-hidden="true"></i></h1>
           </div>
           <div class="icon-holder">
-            <img src="assets/img/study_icon1.png" alt="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/study_icon1.png" alt="">
           </div>
           <div class="icon-text">
             <h3>Stojimu balai</h3>
@@ -320,7 +257,7 @@
         </div>
       <div class="col-lg-4 col-md-12">
         <div class="icon-holder">
-          <img src="assets/img/study_icon2.png" alt="">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/study_icon2.png" alt="">
         </div>
         <div class="icon-text">
           <h3>Stojimu balai</h3>
@@ -331,7 +268,7 @@
       </div>
       <div class="col-lg-4 col-md-12">
         <div class="icon-holder">
-          <img src="assets/img/study_icon3.png" alt="">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/study_icon3.png" alt="">
         </div>
         <div class="icon-text">
           <h3>Stojimu balai</h3>
@@ -348,7 +285,7 @@
   </div>
   <div class="blog-line">
   </div>
-  <div class="img" style='background-image: url("assets/img/blog.png");'>
+  <div class="img" style='background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/assets/img/blog.png");'>
 
   <div class="container">
     <div class="row">
@@ -361,7 +298,7 @@
       </div>
       <div class="col-lg-4 col-md-12">
         <div class="img-holder">
-          <img class="img-fluid" src="assets/img/blog1.png" alt="">
+          <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/blog1.png" alt="">
         </div>
         <div class="text img-fluid">
           <h2>Prisimenant neabejingumo Mokytoją</h2>
@@ -374,7 +311,7 @@
       </div>
       <div class="col-lg-4 col-md-12">
         <div class="img-holder">
-          <img class="img-fluid" src="assets/img/blog2.png" alt="">
+          <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/blog2.png" alt="">
         </div>
         <div class="text img-fluid">
           <h2>„Vatniko“ nuotykiai Lietuvoje: kaip
@@ -388,7 +325,7 @@ memas, o nuo 2013 m. lapkričio pabaigos
       </div>
       <div class="col-lg-4 col-md-12">
         <div class="img-holder">
-          <img class="img-fluid" src="assets/img/blog3.png" alt="">
+          <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/blog3.png" alt="">
         </div>
         <div class="text img-fluid">
           <h2>Kodėl mes, Homo sapiens,
@@ -446,56 +383,4 @@ siekia malonumų...</p>
 
 </div>
 </section>
-<section class="contacts">
-  <div class="contact-line">
-
-  </div>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <div class="yDot">      </div>
-      <i class="fa fa-circle fa-3x costum-circle" aria-hidden="true"></i>
-
-      <h1>KONTAKTAI</h1>
-    </div>
-    <div class="col-lg-3 col-md-12">
-      <p><div class="place">
-
-      </div>VU Filosoﬁjos fakultetas,<br>
-      Universiteto g. 9/1</p>
-    </div>
-    <div class="col-lg-3 col-md-12">
-      <p><div class="mail">
-
-      </div>www.fsf.vu.lt</p>
-    </div>
-    <div class="col-lg-3 col-md-12">
-      <p><div class="fb">
-
-      </div>FB: Sociologijos Akademija</p>
-    </div>
-    <div class="col-lg-3 col-md-12">
-      <p><div class="phone">
-
-      </div>tel.: best desgigner ever</p>
-    </div>
-  </div>
-</div>
-</section>
-<!-- Large modal -->
-
-<div class="modal fade video-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-<?php wp_footer(); ?>
-  </body>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-</html>
+<?php get_footer(); ?>
