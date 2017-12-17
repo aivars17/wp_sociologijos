@@ -25,6 +25,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
     <script src="https://use.fontawesome.com/da7d68fc96.js"></script>
+    <?php wp_head(); ?>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-yellow">
@@ -490,6 +491,7 @@ siekia malonumų...</p>
     </div>
   </div>
 </div>
+<?php wp_footer(); ?>
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
