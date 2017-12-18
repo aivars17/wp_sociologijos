@@ -58,6 +58,7 @@ add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
 add_theme_support('post-thumbnails');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // functions.php
 register_nav_menu( 'header-menu', 'Header Menu' );
 function add_class_to_all_menu_anchors( $atts ) {
@@ -67,6 +68,8 @@ function add_class_to_all_menu_anchors( $atts ) {
 }
 add_filter( 'header-menu', 'add_class_to_all_menu_anchors', 10 );
 =======
+=======
+>>>>>>> a8b957984a34ba876b66f3d4f7093623d7afb120
 
 // menu Paulius
 
@@ -134,4 +137,7 @@ $wp_customize->add_control( 'Text', array(
     }
 }
 
+<<<<<<< HEAD
+>>>>>>> a8b957984a34ba876b66f3d4f7093623d7afb120
+=======
 >>>>>>> a8b957984a34ba876b66f3d4f7093623d7afb120
