@@ -16,10 +16,7 @@
         </div>
       <div class="col-lg-6 col-md-12">
         <div class="about-text__index">
-          Sociologijos akademija - Neformali
-          organizacija, siekianti parodyti moksleiviams
-          kasdienio gyvenimo aspektus iš sociologijos
-          mokslo perspektyvos.
+           <p><?php echo get_theme_mod('Text'); ?></p>
         </div>
         <div class="about-more">
           <a href="#">Skaityti daugiau <span>>></span></a>
@@ -163,7 +160,7 @@
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery1.png" alt="">
       </div>
       <div class="gallery-img">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery2.png" alt="">
+       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery2.png" alt="">
       </div>
     </div>
     <div class="col-6">

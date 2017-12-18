@@ -15,9 +15,8 @@
                     <p>FB: Sociologijos akademija</p>
                 </div>
                 <div class="col-12 col-sm-3 contact-item">
-                    <p>tel.:+370********</p>
+                    <p>tel.:+370********</p>             
                 </div>
-
             </div>
         </div>
     </section>

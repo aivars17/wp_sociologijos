@@ -40,7 +40,9 @@ nav .mb-logo img{
 }
 nav .nav-link  {
   color:#333338;
+
 }
+
 nav .registration-block a{
   position: absolute;
   top: 12px;
@@ -212,7 +214,7 @@ section.events .img-holder img{
   width: 100%;
 }
 section.events {
-  
+
   background: linear-gradient(#4E4D5C, #333338);
 }
 section.events .events-header{
@@ -278,6 +280,15 @@ section.gallery{
 section.gallery .gallery-img{
   padding: 21px 0;
 }
+.gallery-small {
+  overflow: hidden; 
+  position: relative;
+  height: 359px; 
+  width: 540px; 
+}
+.bams {
+  position: absolute;
+}
 section.gallery .gallery-header{
   text-align: center;
   padding-left: 20px;
@@ -289,11 +300,17 @@ section.gallery .gallery-header h1{
 }
 section.gallery .gallery-img img{
   width: 100%;
+
 }
-section.gallery .gallery-img-long img{
+.gallery-img-long {
+  height: 770px; 
+  width: 540px;
+}
+section.gallery-img-long img{
   width: 100%;
   /*padding-top: 10px;*/
   /*height: 630px;*/
+  position: absolute;   
 }
 section.gallery .gallery-more{
   float: right;
