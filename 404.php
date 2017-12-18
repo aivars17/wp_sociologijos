@@ -6,7 +6,7 @@
  * @subpackage Sociology
  * @since Sociology 0.1
  */
-get_header();?>
+get_header('single');?>
  <section class="hero404">
       <div class="text-hero4">
         <h1><?php _e( '404', 'wp_sociologijos'); ?></h1>

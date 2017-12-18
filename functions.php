@@ -57,7 +57,7 @@ add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
 
 add_theme_support('post-thumbnails');
 
-<<<<<<< HEAD
+
 // menu Paulius
 
 register_nav_menus([
@@ -74,7 +74,6 @@ function top_menu($attributes, $item){
 }
 
 
-=======
 
 add_action( 'customize_register', 'soc_customize_register' );
 function soc_customize_register( $wp_customize ) {
@@ -144,4 +143,4 @@ function soc_customize_register( $wp_customize ) {
         return get_theme_mod('wp_sociologijos copyright');
     }
 }
->>>>>>> 00217abee3bc48eb4d397803295a2203d6ad673a
+

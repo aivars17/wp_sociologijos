@@ -1,3 +1,4 @@
+<?php /* Template name: Renginiai */ ?>
 <?php get_header('single'); ?>
         </div>
   </nav>

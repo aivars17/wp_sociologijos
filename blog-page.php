@@ -1,3 +1,4 @@
+<?php /* Template name: Blogas */ ?>
 <?php get_header('single'); ?>
     <section class="blog-hero">
         <div class="blog-heading">
