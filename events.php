@@ -1,53 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Sociologijos.css">
-    <link rel="stylesheet" href="assets/css/events.css">
-    <title>Events</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-yellow navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav m-md-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">APIE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">RENGINIAI</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">GALERIJA</a>
-                </li>
-                <li class="nav-item d-none d-lg-block">
-                    <a class="nav-link logo-link" href="#">
-                        <div class="logo-holder">
-                            <img src="assets/img/logo.png">
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">STUDIJOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">BLOGAS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ATSILIEPIMAI</a>
-                </li>
-            </ul>
-            <div class="registration-block m-ml-auto">
-                <a href="#">REGISTRUOTIS</a>
-            </div>
-
+<?php get_header('single'); ?>
         </div>
   </nav>
     <div class="events">
@@ -319,30 +270,4 @@
         </div>
       </div>
     </div>
-    <section class="contacts">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6 contCont">
-                    <h1>KONTAKTAI</h1>
-                </div>
-                <div class="col-sm-3"></div>
-            </div>
-            <div class="row cont">
-                <div class="col-sm-3">
-                    <p>VU filologijos fakultetas, Universiteto g. 9/1</p>
-                </div>
-                <div class="col-sm-3">
-                    <p>www.fsf.vu.lt</p>
-                </div>
-                <div class="col-sm-3">
-                    <p>FB: Sociologijos akademija</p>
-                </div>
-                <div class="col-sm-3">
-                    <p>tel.: +370 ********</p>
-                </div>
-            </div>
-        </div>
-    </section>
-  </body>
-</html>
+<?php get_footer(); ?>

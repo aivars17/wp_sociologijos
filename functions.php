@@ -51,12 +51,13 @@ function theme_sociology_scripts() {
     wp_enqueue_script( 'pooper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js');
     wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js');
 
-    
-}
+    };
+
 add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
 
 add_theme_support('post-thumbnails');
 
+<<<<<<< HEAD
 // menu Paulius
 
 register_nav_menus([
@@ -73,3 +74,74 @@ function top_menu($attributes, $item){
 }
 
 
+=======
+
+add_action( 'customize_register', 'soc_customize_register' );
+function soc_customize_register( $wp_customize ) {
+  // registruoti customizer objektus
+    $wp_customize->add_setting( 
+  'wp_sociologijos', 
+  array(
+    'type' => 'theme_mod', // or 'option'
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+    'default' => '',
+    'transport' => 'refresh', // or postMessage
+    'sanitize_callback' => '',
+    'sanitize_js_callback' => '', // Basically to_json.
+  )
+);
+
+    $wp_customize->add_control( 
+  'wp_sociologijos', 
+  array(
+    'type' => 'date',
+    'priority' => 10, // Within the section.
+    'section' => 'colors', // Required, core or custom.
+    'label' => __( 'Date' ),
+    'description' => __( 'This is a date control with a red border.' ),
+    'input_attrs' => array(
+      'class' => 'my-custom-class-for-js',
+      'style' => 'border: 1px solid #900',
+      'placeholder' => __( 'mm/dd/yyyy' ),
+    ),
+    'active_callback' => 'is_front_page',
+  )
+);
+
+    $wp_customize->add_control( 
+  new WP_Customize_Color_Control( 
+    $wp_customize, 
+    'color_control', 
+     array(
+      'label'   => __( 'Accent Color', 'theme_textdomain' ),
+      'section' => 'media',
+    ) 
+  ) 
+);
+
+    $wp_customize->add_section( 
+  'custom_css', 
+  array(
+    'title' => __( 'Sociologijos CSS' ),
+    'description' => __( 'Add custom CSS here' ),
+    'panel' => '', // Not typically needed.
+    'priority' => 160,
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '', // Rarely needed.
+  ) 
+);
+
+    $wp_customize->selective_refresh->add_partial( 
+  'wp_sociologijos', array(
+    'selector' => '.site-description',
+    'container_inclusive' => false,
+    'render_callback' => 'callback_function',
+  )
+);
+
+        function render_copyright(){
+        return get_theme_mod('wp_sociologijos copyright');
+    }
+}
+>>>>>>> 00217abee3bc48eb4d397803295a2203d6ad673a
