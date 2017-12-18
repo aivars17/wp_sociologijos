@@ -56,3 +56,20 @@ function theme_sociology_scripts() {
 add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
 
 add_theme_support('post-thumbnails');
+
+// menu Paulius
+
+register_nav_menus([
+    'left-menu'=> 'Menu left',
+    'right-menu'=> 'Menu right'
+    ]);
+
+
+add_filter('nav_menu_link_attributes', 'top_menu', 10, 2);
+
+function top_menu($attributes, $item){
+    $attributes['class'] = 'nav-link' . $item->attr_title;;
+    return $attributes;
+}
+
+
