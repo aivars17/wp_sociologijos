@@ -57,6 +57,24 @@ add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
 
 add_theme_support('post-thumbnails');
 
+<<<<<<< HEAD
+// menu Paulius
+
+register_nav_menus([
+    'left-menu'=> 'Menu left',
+    'right-menu'=> 'Menu right'
+    ]);
+
+
+add_filter('nav_menu_link_attributes', 'top_menu', 10, 2);
+
+function top_menu($attributes, $item){
+    $attributes['class'] = 'nav-link' . $item->attr_title;;
+    return $attributes;
+}
+
+
+=======
 
 add_action( 'customize_register', 'soc_customize_register' );
 function soc_customize_register( $wp_customize ) {
@@ -106,3 +124,4 @@ $wp_customize->add_control( 'Text', array(
         return get_theme_mod('Text');
     }
 }
+>>>>>>> 00217abee3bc48eb4d397803295a2203d6ad673a
