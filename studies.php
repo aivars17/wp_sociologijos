@@ -1,3 +1,4 @@
+<?php /* Template name: Studijos */ ?>
 <?php get_header('single'); ?>
 
     <section class="study">

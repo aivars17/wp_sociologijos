@@ -1,3 +1,4 @@
+<?php /* Template name: Galerija */ ?>
 <?php get_header('single'); ?>
 
     <section class="gallery-hero">

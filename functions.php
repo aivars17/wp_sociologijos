@@ -57,6 +57,7 @@ add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
 
 add_theme_support('post-thumbnails');
 
+
 register_nav_menus([
     'left-menu'=> 'Menu left',
     'right-menu'=> 'Menu right'
@@ -69,7 +70,6 @@ function top_menu($attributes, $item){
     $attributes['class'] = 'nav-link' . $item->attr_title;;
     return $attributes;
 }
-
 
 
 
