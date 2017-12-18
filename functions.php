@@ -57,9 +57,6 @@ add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
 
 add_theme_support('post-thumbnails');
 
-<<<<<<< HEAD
-// menu Paulius
-
 register_nav_menus([
     'left-menu'=> 'Menu left',
     'right-menu'=> 'Menu right'
@@ -74,7 +71,7 @@ function top_menu($attributes, $item){
 }
 
 
-=======
+
 
 add_action( 'customize_register', 'soc_customize_register' );
 function soc_customize_register( $wp_customize ) {
@@ -123,5 +120,28 @@ $wp_customize->add_control( 'Text', array(
     function render_copyright(){
         return get_theme_mod('Text');
     }
+
+$wp_customize->add_section( 'photo' , array(
+    'title'      => 'Apie image',
+    'priority'   => 130,
+) );
+
+$wp_customize->add_setting( 'photo' , array(
+    'default'     => '',
+    'transport'   => 'postMessage',
+) );
+
+$wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'photo',
+           array(
+               'label'      => __( 'Upload a photo', 'wp_sociologijos' ),
+               'section'    => 'photo',
+               'settings'   => 'photo',
+               'context'    => 'your_setting_context' 
+           )
+       )
+   );
 }
->>>>>>> 00217abee3bc48eb4d397803295a2203d6ad673a
+

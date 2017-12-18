@@ -11,7 +11,7 @@
           <h1>APIE<i class="fa fa-circle" aria-hidden="true"></i></h1>
         </div>
         <div class="video-holder">
-          <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img.png"  alt="" data-toggle="modal" data-target=".video-modal">
+          <img class="img-fluid" src="<?php if (get_theme_mod( 'photo' )) : echo get_theme_mod( 'photo'); else: echo get_template_directory_uri().'/assets/img/yDot.png'; endif; ?>"  alt="" data-toggle="modal" data-target=".video-modal">
         </div>
         </div>
       <div class="col-lg-6 col-md-12">
