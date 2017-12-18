@@ -212,7 +212,7 @@ section.events .img-holder img{
   width: 100%;
 }
 section.events {
-
+  
   background: linear-gradient(#4E4D5C, #333338);
 }
 section.events .events-header{
@@ -265,7 +265,7 @@ section.events .events-text .img-adress{
   font-size: 18px;
 }
 section.events .events-more{
-  padding: 50px 0;
+  padding: 40px 0;
   text-decoration: none;
   text-align: right;
 }

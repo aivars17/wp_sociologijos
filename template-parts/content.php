@@ -102,77 +102,43 @@
 </div>
 </section>
 <section class="events">
-  <div class="events-header">
-    <div class="yDot">
+    <div class="events-header">
+      <div class="yDot">
 
+      </div>
+      <h1><i class="fa fa-circle costum-circle" aria-hidden="true"></i>Renginiai</h1>
     </div>
-    <h1><i class="fa fa-circle costum-circle" aria-hidden="true"></i>Renginiai</h1>
-  </div>
-<div class="container">
-  <div class="row">
-    <div class="col-xl-4 col-md-12">
-      <div class="img-holder">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/event1.png" alt="">
+    <div class="container">
+      <div class="row">
+        <?php $blog_cat = new WP_Query( 'cat=3&posts_per_page=3' ); ?>
+        <?php 
+        if ( have_posts() ) : while ( $blog_cat->have_posts() ) : $blog_cat->the_post(); ?>
+        <div class="col-xl-4 col-md-12">
+          <div class="img-holder">
+           <?php the_post_thumbnail('post-thumbnail',['class'=>'img-fluid']); ?>
+         </div>
+         <div class="events-text img-fluid">
+          <div class="img-header">
+            <h2><?php the_title(); ?></h2>
+          </div>
+          <div class="img-date">
+              <span class="date"><?php echo get_post_meta($post->ID, 'Date', true); ?></span>
+              <hr>
+              <span class="time"><?php echo get_post_meta($post->ID, 'Time', true); ?></span>
+            </div>
+            <div class="img-adress">
+             <?php the_content(); ?>
+           </div>
+         </div>
+       </div>
+     <?php endwhile; endif; ?>
+     <?php wp_reset_postdata(); ?>
       </div>
-      <div class="events-text img-fluid">
-        <div class="img-header">
-          <h2>Skulbturos:<br>
-          mada ar pasipriesimas?</h2>
-        </div>
-        <div class="img-date">
-          <span class="date">04 01</span>
-          <hr>
-          <span class="time">10:45 - 17:00</span>
-        </div>
-        <div class="img-adress">
-          VU Filosofijos fakultetas (Universiteto g. 9/1, 301 aud.)
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-4 col-md-12">
-      <div class="img-holder">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/event2.png" alt="">
-      </div>
-      <div class="events-text img-fluid">
-        <div class="img-header">
-          <h2>Skulbturos:<br>
-          mada ar pasipriesimas?</h2>
-        </div>
-        <div class="img-date">
-          <span class="date">04 01</span>
-          <hr>
-          <span class="time">10:45 - 17:00</span>
-        </div>
-        <div class="img-adress">
-          VU Filosofijos fakultetas(Universiteto g. 9/1, 301 aud.)
-        </div>
+      <div class="events-more">
+        <a href="#">Skaityti daugiau <span>>></span></a>
       </div>
     </div>
-    <div class="col-xl-4 col-md-12">
-      <div class="img-holder">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/event3.png" alt="">
-      </div>
-      <div class="events-text img-fluid">
-        <div class="img-header">
-          <h2>Skulbturos:<br>
-          mada ar pasipriesimas?</h2>
-        </div>
-        <div class="img-date">
-          <span class="date">04 01</span>
-          <hr>
-          <span class="time">10:45 - 17:00</span>
-        </div>
-        <div class="img-adress">
-          VU Filosofijos fakultetas(Universiteto g. 9/1, 301 aud.)
-        </div>
-      </div>
-    </div>
-    </div>
-    <div class="events-more">
-      <a href="#">Skaityti daugiau <span>>></span></a>
-    </div>
-  </div>
-</div>
+  
 </section>
 <section class="gallery">
   <div class="gallery-line-top">
