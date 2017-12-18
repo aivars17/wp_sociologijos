@@ -16,10 +16,7 @@
         </div>
       <div class="col-lg-6 col-md-12">
         <div class="about-text__index">
-          Sociologijos akademija - Neformali
-          organizacija, siekianti parodyti moksleiviams
-          kasdienio gyvenimo aspektus iš sociologijos
-          mokslo perspektyvos.
+           <p><?php echo get_theme_mod('Text'); ?></p>
         </div>
         <div class="about-more">
           <a href="#">Skaityti daugiau <span>>></span></a>

@@ -61,68 +61,48 @@ add_theme_support('post-thumbnails');
 add_action( 'customize_register', 'soc_customize_register' );
 function soc_customize_register( $wp_customize ) {
   // registruoti customizer objektus
-    $wp_customize->add_setting( 
-  'wp_sociologijos', 
-  array(
-    'type' => 'theme_mod', // or 'option'
-    'capability' => 'edit_theme_options',
-    'theme_supports' => '', // Rarely needed.
-    'default' => '',
-    'transport' => 'refresh', // or postMessage
-    'sanitize_callback' => '',
-    'sanitize_js_callback' => '', // Basically to_json.
-  )
-);
+$wp_customize->add_section( 'cd_colors' , array(
+    'title'      => 'Colors',
+    'priority'   => 150,
+) );
 
-    $wp_customize->add_control( 
-  'wp_sociologijos', 
-  array(
-    'type' => 'date',
-    'priority' => 10, // Within the section.
-    'section' => 'colors', // Required, core or custom.
-    'label' => __( 'Date' ),
-    'description' => __( 'This is a date control with a red border.' ),
-    'input_attrs' => array(
-      'class' => 'my-custom-class-for-js',
-      'style' => 'border: 1px solid #900',
-      'placeholder' => __( 'mm/dd/yyyy' ),
-    ),
-    'active_callback' => 'is_front_page',
-  )
-);
+$wp_customize->add_setting( 'background_color' , array(
+    'default'     => '#43C6E4',
+    'transport'   => 'refresh',
+) );
 
-    $wp_customize->add_control( 
-  new WP_Customize_Color_Control( 
-    $wp_customize, 
-    'color_control', 
-     array(
-      'label'   => __( 'Accent Color', 'theme_textdomain' ),
-      'section' => 'media',
-    ) 
-  ) 
-);
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
+    'label'        => 'Background Color',
+    'section'    => 'cd_colors',
+    'settings'   => 'background_color',
+) ) );
 
-    $wp_customize->add_section( 
-  'custom_css', 
-  array(
-    'title' => __( 'Sociologijos CSS' ),
-    'description' => __( 'Add custom CSS here' ),
-    'panel' => '', // Not typically needed.
-    'priority' => 160,
-    'capability' => 'edit_theme_options',
-    'theme_supports' => '', // Rarely needed.
-  ) 
-);
+$wp_customize->add_section( 'Text' , array(
+    'title'      => 'Text',
+    'priority'   => 140,
+) );
+
+$wp_customize->add_setting( 'Text' , array(
+    'default'     => '',
+    'transport'   => 'postMessage',
+) );
+
+$wp_customize->add_control( 'Text', array(
+    'label' => 'Text',
+'section'   => 'Text',
+'type'   => 'text',
+
+) );
 
     $wp_customize->selective_refresh->add_partial( 
   'wp_sociologijos', array(
     'selector' => '.site-description',
     'container_inclusive' => false,
-    'render_callback' => 'callback_function',
+    'render_callback' => 'render_copyright',
   )
 );
 
-        function render_copyright(){
-        return get_theme_mod('wp_sociologijos copyright');
+    function render_copyright(){
+        return get_theme_mod('Text');
     }
 }
