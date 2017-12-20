@@ -124,7 +124,7 @@
               <span class="time"><?php echo get_post_meta($post->ID, 'Time', true); ?></span>
             </div>
             <div class="img-adress">
-             <?php the_content(); ?>
+             <?php the_excerpt(); ?>
            </div>
          </div>
        </div>
@@ -240,6 +240,8 @@
           <h1>BLOGAS</h1>
         </div>
       </div>
+       
+
       <?php $blog_cat = new WP_Query( 'cat=2&posts_per_page=3' ); ?>
       <?php 
       if ( have_posts() ) : while ( $blog_cat->have_posts() ) : $blog_cat->the_post(); ?>
@@ -250,7 +252,7 @@
               <div class="text img-fluid">
                 <h2><?php the_title(); ?></h2>
                 <h6><?php the_date(); ?></h6>
-                <p><?php the_content(); ?></p>
+                <p><?php the_excerpt(); ?></p>
         </div>
       </div>
       <?php endwhile; endif; ?>

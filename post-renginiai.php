@@ -217,58 +217,32 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <img src="assets/img/Renginiai1.png" alt="">
-            <div class="currentEventsContent">
-              <div class="currentEventsTitle">
-                <h3>Subkultūros: mada ar pasipriešinimas?</h3>
-              </div>
-              <hr>
-              <div class="currentEventsDate">
-                <h6>05 20</h6>
-                <hr>
-                <p>10.45 - 17.00</p>
-              </div>
-              <p>VU Filosofijos fakultetas <br/>
-                (Universiteto g. 9/1, 301 aud.)
-              </p>
-            </div>
+          <?php $blog_cat = new WP_Query( array('post_type' => 'renginiai', 'posts_per_page' => 3) ); ?>
+        <?php 
+        if ( have_posts() ) : while ( $blog_cat->have_posts() ) : $blog_cat->the_post(); ?>
+        <div class="col-xl-4 col-md-12">
+          
+           <?php the_post_thumbnail('post-thumbnail',['class'=>'img-fluid']); ?>
+         
+         <div class="currentEventsContent">
+          <div class="currentEventsTitle">
+            <h3><?php the_title(); ?></h3>
           </div>
-          <div class="col-md-4">
-            <img src="assets/img/Renginiai2.png" alt="">
-            <div class="currentEventsContent">
-              <div class="currentEventsTitle">
-                <h3>Renkantis gyvenimą už visuomenės ribų</h3>
-              </div>
+          <hr>
+          <div class="currentEventsDate">
+              <h6><span class="date"><?php echo get_post_meta($post->ID, 'Date', true); ?></span></h6>
               <hr>
-              <div class="currentEventsDate">
-                <h6>03 18</h6>
-                <hr>
-                <p>10.45 - 16.30</p>
-              </div>
-              <p>VU Filosofijos fakultetas <br/>
-                (Universiteto g. 9/1, 301 aud.)
-              </p>
+              <span class="time"><?php echo get_post_meta($post->ID, 'Time', true); ?></span>
             </div>
-          </div>
-          <div class="col-md-4">
-            <img src="assets/img/Renginiai3.png" alt="">
-            <div class="currentEventsContent">
-              <div class="currentEventsTitle">
-                <h3>Kur (Ne) Stoti?</h3>
-              </div>
-              <hr>
-              <div class="currentEventsDate">
-                <h6>02 18</h6>
-                <hr>
-                <p>10.45 - 16.30</p>
-              </div>
-              <p>VU Filosofijos fakultetas <br/>
-                (Universiteto g. 9/1, 301 aud.)
-              </p>
-            </div>
-          </div>
+            
+             <?php the_excerpt(); ?>
+           
+         </div>
+       </div>
+     <?php endwhile; endif; ?>
+     <?php wp_reset_postdata(); ?>
         </div>
       </div>
     </div>
+
 <?php get_footer(); ?>

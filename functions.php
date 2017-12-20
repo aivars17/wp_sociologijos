@@ -128,3 +128,14 @@ $wp_customize->add_control(
        )
    );
 }
+
+function renginiai_setup_post_type() {
+    $args = array(
+        'public'    => true,
+        'label'     => __( 'Renginiai', 'textdomain' ),
+        'menu_icon' => 'dashicons-book',
+        'supports'           => array( 'title', 'editor', 'custom-fields', 'author', 'thumbnail', 'excerpt', 'comments' ),
+    );
+    register_post_type( 'renginiai', $args );
+}
+add_action( 'init', 'renginiai_setup_post_type' );
