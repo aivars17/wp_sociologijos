@@ -24,11 +24,9 @@
  * @subpackage Sociology
  * @since Sociology 0.1
  */
-
 /**
  * Sociology only works in WordPress 4.4 or later.
  */
-
 /**
  * Proper way to enqueue scripts and styles
  */
@@ -50,14 +48,9 @@ function theme_sociology_scripts() {
     wp_enqueue_script( 'jQuery_js', 'https://code.jquery.com/jquery-3.2.1.slim.min.js');
     wp_enqueue_script( 'pooper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js');
     wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js');
-
     };
-
 add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
-
 add_theme_support('post-thumbnails');
-
-
 // functions.php
 register_nav_menu( 'header-menu', 'Header Menu' );
 function add_class_to_all_menu_anchors( $atts ) {
@@ -66,23 +59,15 @@ function add_class_to_all_menu_anchors( $atts ) {
     return $atts;
 }
 add_filter( 'header-menu', 'add_class_to_all_menu_anchors', 10 );
-
-
 register_nav_menus([
     'left-menu'=> 'Menu left',
     'right-menu'=> 'Menu right'
     ]);
-
-
 add_filter('nav_menu_link_attributes', 'top_menu', 10, 2);
-
 function top_menu($attributes, $item){
     $attributes['class'] = 'nav-link' . $item->attr_title;;
     return $attributes;
 }
-
-
-
 add_action( 'customize_register', 'soc_customize_register' );
 function soc_customize_register( $wp_customize ) {
   // registruoti customizer objektus
@@ -90,35 +75,28 @@ $wp_customize->add_section( 'cd_colors' , array(
     'title'      => 'Colors',
     'priority'   => 150,
 ) );
-
 $wp_customize->add_setting( 'background_color' , array(
     'default'     => '#43C6E4',
     'transport'   => 'refresh',
 ) );
-
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
     'label'        => 'Background Color',
     'section'    => 'cd_colors',
     'settings'   => 'background_color',
 ) ) );
-
 $wp_customize->add_section( 'Text' , array(
     'title'      => 'Text',
     'priority'   => 140,
 ) );
-
 $wp_customize->add_setting( 'Text' , array(
     'default'     => '',
     'transport'   => 'postMessage',
 ) );
-
 $wp_customize->add_control( 'Text', array(
     'label' => 'Text',
 'section'   => 'Text',
 'type'   => 'text',
-
 ) );
-
     $wp_customize->selective_refresh->add_partial( 
   'wp_sociologijos', array(
     'selector' => '.site-description',
@@ -126,21 +104,17 @@ $wp_customize->add_control( 'Text', array(
     'render_callback' => 'render_copyright',
   )
 );
-
     function render_copyright(){
         return get_theme_mod('Text');
     }
-
 $wp_customize->add_section( 'photo' , array(
     'title'      => 'Apie image',
     'priority'   => 130,
 ) );
-
 $wp_customize->add_setting( 'photo' , array(
     'default'     => '',
     'transport'   => 'postMessage',
 ) );
-
 $wp_customize->add_control(
        new WP_Customize_Image_Control(
            $wp_customize,
@@ -154,5 +128,3 @@ $wp_customize->add_control(
        )
    );
 }
-
-
