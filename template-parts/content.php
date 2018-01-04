@@ -15,11 +15,11 @@
         </div>
         </div>
       <div class="col-lg-6 col-md-12">
-        <div class="about-text__index">
+        <div class="about-text_index">
            <p><?php echo get_theme_mod('Text'); ?></p>
         </div>
         <div class="about-more">
-          <a href="#">Skaityti daugiau <span>>></span></a>
+          <a href="">Skaityti daugiau <span>>></span></a>
         </div>
       </div>
 
@@ -107,9 +107,10 @@
     </div>
     <div class="container">
       <div class="row">
-        <?php $blog_cat = new WP_Query( 'cat=3&posts_per_page=3' ); ?>
+        <?php $renginiai = new WP_Query('post_type=renginiai&posts_per_page=3');  ?>
+        
         <?php 
-        if ( have_posts() ) : while ( $blog_cat->have_posts() ) : $blog_cat->the_post(); ?>
+        if ( have_posts() ) : while ( $renginiai->have_posts() ) : $renginiai->the_post(); ?>
         <div class="col-xl-4 col-md-12">
           <div class="img-holder">
            <?php the_post_thumbnail('post-thumbnail',['class'=>'img-fluid']); ?>
