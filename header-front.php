@@ -37,7 +37,13 @@
     </ul>
     </div>
     <div class="registration-block hidden-dm-down d-none d-lg-block">
-        <a href="#">REGISTRUOKIS</a>
+          <?php $args = array(
+          'theme_location'  => 'register-menu',
+          'container' => null,
+          'items_wrap' => '%3$s',
+          );
+          wp_nav_menu( $args );?>
+       
       </div>
     </nav>
     <section class="hero__index">

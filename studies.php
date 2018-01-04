@@ -14,7 +14,7 @@
 
       </div> -->
       <div class=" sectionHead-vertical disabled">
-        <h1 class="disabled">STUDIJOS<img src="slices/slice5.png" alt=""></h1>
+        <h1 class="disabled">STUDIJOS<img src="<?php echo get_template_directory_uri();?>/slices/slice5.png" alt=""></h1>
 
       </div>
 
@@ -28,15 +28,15 @@
 
 
         <div class="studyContainer-item">
-          <img src="assets/img/vu1.png" alt="">
+          <img src="<?php echo get_template_directory_uri();?>/assets/img/vu1.png" alt="">
 
         </div>
         <div class="studyContainer-item">
-          <img src="assets/img/vu2.png" alt="">
+          <img src="<?php echo get_template_directory_uri();?>/assets/img/vu2.png" alt="">
 
         </div>
         <div class="studyContainer-item">
-          <img src="assets/img/vu3.png" alt="">
+          <img src="<?php echo get_template_directory_uri();?>/assets/img/vu3.png" alt="">
 
 
         </div>

@@ -61,7 +61,8 @@ function add_class_to_all_menu_anchors( $atts ) {
 add_filter( 'header-menu', 'add_class_to_all_menu_anchors', 10 );
 register_nav_menus([
     'left-menu'=> 'Menu left',
-    'right-menu'=> 'Menu right'
+    'right-menu'=> 'Menu right',
+    'register-menu'=> 'Register menu'
     ]);
 add_filter('nav_menu_link_attributes', 'top_menu', 10, 2);
 function top_menu($attributes, $item){
@@ -128,3 +129,12 @@ $wp_customize->add_control(
        )
    );
 }
+
+function wpdocs_codex_custom_init() {
+    $args = array(
+        'public' => true,
+        'label'  => __( 'Renginiai', 'textdomain' ),
+    );
+    register_post_type( 'renginiai', $args );
+}
+add_action( 'init', 'wpdocs_codex_custom_init' );
