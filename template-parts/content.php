@@ -158,15 +158,15 @@
   <div class="row justify-content-center">
     <div class="col-6 ">
       <div class="gallery-img">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery1.png" alt="">
+        <img src="<?php if (get_theme_mod( 'front-gallery-s-1' )) : echo get_theme_mod( 'front-gallery-s-1'); else: echo get_stylesheet_directory_uri() .'/assets/img/gallery1.png'; endif; ?>" alt="">
       </div>
       <div class="gallery-img">
-       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery2.png" alt="">
+       <img src="<?php if (get_theme_mod( 'front-gallery-s-2' )) : echo get_theme_mod( 'front-gallery-s-2'); else: echo get_stylesheet_directory_uri() .'/assets/img/gallery2.png'; endif; ?>" alt="">
       </div>
     </div>
     <div class="col-6">
       <div class="gallery-img gallery-img-long">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery3.png" alt="">
+        <img src="<?php if (get_theme_mod( 'front-gallery-s-3' )) : echo get_theme_mod( 'front-gallery-s-3'); else: echo get_stylesheet_directory_uri() . '/assets/img/gallery3.png'; endif; ?>" alt="">
       </div>
     </div>
   </div>

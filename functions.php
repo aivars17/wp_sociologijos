@@ -91,11 +91,11 @@ $wp_customize->add_section( 'Text' , array(
 ) );
 $wp_customize->add_setting( 'Text' , array(
     'default'     => '',
-    'transport'   => 'postMessage',
+    'transport'   => 'refresh',
 ) );
 $wp_customize->add_control( 'Text', array(
     'label' => 'Text',
-'section'   => 'Text',
+'section'   => 'photo',
 'type'   => 'text',
 ) );
     $wp_customize->selective_refresh->add_partial( 
@@ -109,12 +109,12 @@ $wp_customize->add_control( 'Text', array(
         return get_theme_mod('Text');
     }
 $wp_customize->add_section( 'photo' , array(
-    'title'      => 'Apie image',
+    'title'      => 'Apie content',
     'priority'   => 130,
 ) );
 $wp_customize->add_setting( 'photo' , array(
     'default'     => '',
-    'transport'   => 'postMessage',
+    'transport'   => 'refresh',
 ) );
 $wp_customize->add_control(
        new WP_Customize_Image_Control(
@@ -128,7 +128,61 @@ $wp_customize->add_control(
            )
        )
    );
+$wp_customize->add_section( 'front-gallery' , array(
+    'title'      => 'Galerijos paveikslai',
+    'priority'   => 130,
+) );
+$wp_customize->add_setting( 'front-gallery-s-1' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+) );
+$wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'front-gallery-s-1',
+           array(
+               'label'      => __( 'Įkelti nuotrauka kairė viršus', 'wp_sociologijos' ),
+               'section'    => 'front-gallery',
+               'settings'   => 'front-gallery-s-1',
+               'context'    => 'your_setting_context' 
+           )
+       )
+   );
+$wp_customize->add_setting( 'front-gallery-s-2' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+) );
+$wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'front-gallery-s-2',
+           array(
+               'label'      => __( 'Įkelti nuotrauka kairė apačia', 'wp_sociologijos' ),
+               'section'    => 'front-gallery',
+               'settings'   => 'front-gallery-s-2',
+               'context'    => 'your_setting_context' 
+           )
+       )
+   );
+$wp_customize->add_setting( 'front-gallery-s-3' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+) );
+$wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'front-gallery-s-3',
+           array(
+               'label'      => __( 'Įkelti nuotrauka dešinė', 'wp_sociologijos' ),
+               'section'    => 'front-gallery',
+               'settings'   => 'front-gallery-s-3',
+               'context'    => 'your_setting_context' 
+           )
+       )
+   );
+
 }
+
 
 
 function wpdocs_codex_custom_init() {
