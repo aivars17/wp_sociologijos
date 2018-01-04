@@ -906,3 +906,12 @@ section.study_index .study-circle{
   }
 
 }
+.mySlides {
+  opacity: 0.8;
+}
+.team-slide-title {
+  display: none;
+}
+.cursor-hand:hover {
+  cursor: pointer;
+}

@@ -21,7 +21,7 @@
           'items_wrap' => '%3$s',
           );
           wp_nav_menu( $args );?>
-            <a class="nav-link logo-link" href="#">
+            <a class="nav-link logo-link" href="<?php ?>">
               <div class="logo-holder">
                 <img src='<?php echo get_template_directory_uri();?>/assets/img/logo.png' alt="">
               </div>
