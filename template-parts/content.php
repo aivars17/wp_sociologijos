@@ -8,20 +8,30 @@
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <div class="rotated-about">
-          <h1>APIE<i class="fa fa-circle" aria-hidden="true"></i></h1>
-        </div>
-        <div class="video-holder">
-          <img class="img-fluid" src="<?php if (get_theme_mod( 'photo' )) : echo get_theme_mod( 'photo'); else: echo get_template_directory_uri().'/assets/img/yDot.png'; endif; ?>"  alt="" data-toggle="modal" data-target=".video-modal">
-        </div>
-        </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="about-text__index">
-           <p><?php echo get_theme_mod('Text'); ?></p>
-        </div>
-        <div class="about-more">
-          <a href="#">Skaityti daugiau <span>>></span></a>
-        </div>
-      </div>
+          <?php $apie = new WP_Query( 'page_id=15' ); ?>
+          <?php 
+            if ( have_posts() ) {
+              while ( $apie->have_posts() ) {
+                $apie->the_post(); ?>
+                 <h1><?php the_title(); ?><i class="fa fa-circle" aria-hidden="true"></i></h1>
+                    </div>
+                    <div class="video-holder">
+                      <?php the_post_thumbnail('post-thumbnail',['class'=>'img-fluid']); ?>
+                    </div>
+                    </div>
+                  <div class="col-lg-6 col-md-12">
+                    <div class="about-text_index">
+                       <p><?php the_content(); ?></p>
+                    </div>
+                    <div class="about-more">
+                      <a href="<?php echo get_permalink();?>">Skaityti daugiau <span>>></span></a>
+                    </div>
+                  </div>
+                  <?php 
+              } // end while
+            } // end if
+            ?>
+         
 
     </div>
 
@@ -43,13 +53,25 @@
       <div class="team-line2">
 
       </div>
-      <h4><span>”</span>Aistė</h4>
-      <hr>
-      <p>Studijuoju Vilniaus universitete sociologiją - labai
-      įdomu, nesigailiu. Laivalaikiu mėgstu žiūrėti ﬁlmus,
-      gaminti ir fotografuoti. Džiaugiuosi galėdama
-      derinti ir mokslus, ir pomėgius, viskam skirdama
-      laiko, kartais net juos jungdama“</p>
+      <div style="display: block;" class="team-slide-title">
+        <h4 ><span>”</span>JUSTE</h4>
+        <hr>
+        <p class="team-slide-text">Studijuoju Vilniaus universitete sociologiją - labai
+        įdomu, nesigailiu. Laivalaikiu mėgstu žiūrėti ﬁlmus,
+        gaminti ir fotografuoti. Džiaugiuosi galėdama
+        derinti ir mokslus, ir pomėgius, viskam skirdama
+        laiko, kartais net juos jungdama“</p>
+      </div>
+      <div class="team-slide-title">
+        <h4 ><span>”</span>TOMAS</h4>
+        <hr>
+        <p class="team-slide-text">Sveiki, esu antro kurso studentė, studijuoju slaugą, taigi turiu patirties darbe darželyje su skirtingo amžiaus vaikais, su vaikais, kurie turi fizinės raidos sutrikimų ir pan. Esu pareiginga“</p>
+      </div>
+      <div class="team-slide-title">
+        <h4 ><span>”</span>Aistė</h4>
+        <hr>
+        <p class="team-slide-text">Verčiu anglų-lietuvių bei lietuvių-anglų tekstus, ruošiu namų darbus, skaidres, rašau rašinėlius, referatus. Už papildomą kainą galiu darbus atlikti skubiai, dažniausiai tą pačią “</p>
+    </div>
     </div>
   </div>
 </div>
@@ -57,22 +79,28 @@
   <div class="row">
     <div class="col-lg-1 col-3">
       <div class="icon-holder-left">
-        <i class="fa fa-4x fa-angle-left" aria-hidden="true"></i>
+        <i onclick="plusDivs(-1)" class="fa fa-4x fa-angle-left cursor-hand" aria-hidden="true"></i>
       </div>
     </div>
-    <div class="col-lg-2 col-md-12 d-none d-lg-block">
+    <div style="opacity: 1;" class="col-lg-2 col-md-12 d-none d-lg-block mySlides">
       <div class="img-holder">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img3.png" alt="">
+        <img  class="img-fluid " src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img3.png" alt="">
+      </div>
+      <div class="team-name img-fluid">
+        JUSTE
       </div>
     </div>
-    <div class="col-lg-2 col-md-12 d-none d-lg-block">
-      <div class="img-holder">
+    <div class="col-lg-2 col-md-12 d-none d-lg-block mySlides">
+      <div class="img-holder ">
         <img class="img-fluid " src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img2.png" alt="">
       </div>
+      <div class="team-name img-fluid">
+        TOMAS
+      </div>
     </div>
-    <div class="col-lg-2 col-6">
+    <div class="col-lg-2 col-6 mySlides">
       <div id="img-active" class="img-holder">
-        <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img.png" alt="">
+        <img  class="img-fluid " src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/team_img.png" alt="">
       </div>
       <div class="team-name img-fluid">
         AISTE
@@ -80,7 +108,7 @@
     </div>
     <div class="col-lg-1 col-3">
       <div class="icon-holder">
-        <i class="fa fa-4x fa-angle-right" aria-hidden="true"></i>
+        <i onclick="plusDivs(1)" class="fa fa-4x fa-angle-right cursor-hand" aria-hidden="true"></i>
       </div>
     </div>
 
@@ -107,9 +135,10 @@
     </div>
     <div class="container">
       <div class="row">
-        <?php $blog_cat = new WP_Query( 'cat=3&posts_per_page=3' ); ?>
+        <?php $renginiai = new WP_Query('post_type=renginiai&posts_per_page=3');  ?>
+        
         <?php 
-        if ( have_posts() ) : while ( $blog_cat->have_posts() ) : $blog_cat->the_post(); ?>
+        if ( have_posts() ) : while ( $renginiai->have_posts() ) : $renginiai->the_post(); ?>
         <div class="col-xl-4 col-md-12">
           <div class="img-holder">
            <?php the_post_thumbnail('post-thumbnail',['class'=>'img-fluid']); ?>
@@ -157,15 +186,15 @@
   <div class="row justify-content-center">
     <div class="col-6 ">
       <div class="gallery-img">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery1.png" alt="">
+        <img src="<?php if (get_theme_mod( 'front-gallery-s-1' )) : echo get_theme_mod( 'front-gallery-s-1'); else: echo get_stylesheet_directory_uri() .'/assets/img/gallery1.png'; endif; ?>" alt="">
       </div>
       <div class="gallery-img">
-       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery2.png" alt="">
+       <img src="<?php if (get_theme_mod( 'front-gallery-s-2' )) : echo get_theme_mod( 'front-gallery-s-2'); else: echo get_stylesheet_directory_uri() .'/assets/img/gallery2.png'; endif; ?>" alt="">
       </div>
     </div>
     <div class="col-6">
       <div class="gallery-img gallery-img-long">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/gallery3.png" alt="">
+        <img src="<?php if (get_theme_mod( 'front-gallery-s-3' )) : echo get_theme_mod( 'front-gallery-s-3'); else: echo get_stylesheet_directory_uri() . '/assets/img/gallery3.png'; endif; ?>" alt="">
       </div>
     </div>
   </div>
@@ -175,6 +204,12 @@
 </div>
 </section>
 
+<ul id="sidebar">
+<?php if ( ! dynamic_sidebar() ) : ?>
+  <li>{static sidebar item 1}</li>
+  <li>{static sidebar item 2}</li>
+<?php endif; ?>
+</ul>
 <section class="study_index">
   <div class="container">
     <div class="study-circle">
@@ -279,24 +314,45 @@
   <div class="row align-items-center">
     <div class="col-md-2">
       <div class="icon-holder-left d-none d-lg-block">
-        <i class="fa fa-4x fa-angle-left" aria-hidden="true"></i>
+        <i onclick="slideComments(-1)" class="fa fa-4x fa-angle-left cursor-hand" aria-hidden="true"></i>
       </div>
     </div>
+    
     <div class="col-md-8 center">
       <div class="feed-text">
         <div class="yDot">      </div>
-        <i class="fa fa-circle fa-3x costum-circle" aria-hidden="true"></i>
+        <i class="fa fa-circle fa-3x costum-circle " aria-hidden="true"></i>
         <h1><span>”</span>ASTSILIEPIMAI</h1>
-        <p>Paskaitos niekada neprailgdavo, įdomūs svečiai ne tik suteikė
-        praktinių žinių, bet ir įkvėpė pačiai analizuoti ir
-        mokytis iš savo aplinkos. Puikiai sugalvotos užduotys, linksmos akimirkos ir
-        draugiškas kolektyvas - apibūdina „Sociologijos akademiją.</p>
-        <h6>Nida</h6>
+        <?php
+          $args = array(
+             // args here
+          );
+
+          // The Query
+          $comments_query = new WP_Comment_Query;
+          $comments = $comments_query->query( $args );
+           
+          // Comment Loop
+          if ( $comments ) {
+            echo "<div class='slide-comments'>";
+            echo '<p>' . $comments[0]->comment_content . '</p>';
+            echo '<h6>' . $comments[0]->comment_author . '</h6>';
+            echo "</div>";
+            foreach ( $comments as $comment ) {
+              echo "<div style='display:none;' class='slide-comments'";
+              echo '<p>' . $comment->comment_content . '</p>';
+              echo '<h6>' . $comment->comment_author . '</h6>';
+              echo "</div>";
+            }
+          } else {
+            echo 'No comments found.';
+          }
+        ?>
       </div>
     </div>
     <div class="col-md-2">
       <div class="icon-holder-right d-none d-lg-block">
-        <i class="fa fa-4x fa-angle-right" aria-hidden="true"></i>
+        <i onclick="slideComments(1)" class="fa fa-4x fa-angle-right cursor-hand" aria-hidden="true"></i>
       </div>
     </div>
   </div>

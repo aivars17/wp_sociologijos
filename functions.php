@@ -44,10 +44,12 @@ function theme_sociology_scripts() {
     wp_enqueue_style( 'studies_css', get_template_directory_uri() . '/assets/css/studies.css');
     wp_enqueue_style( 'team_css', get_template_directory_uri() . '/assets/css/team.css');
     
+    
     wp_enqueue_script( 'script', 'https://use.fontawesome.com/da7d68fc96.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'jQuery_js', 'https://code.jquery.com/jquery-3.2.1.slim.min.js');
     wp_enqueue_script( 'pooper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js');
     wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js');
+    wp_enqueue_script( 'slide', get_template_directory_uri() . '/assets/js/slide.js');
     };
 add_action( 'wp_enqueue_scripts', 'theme_sociology_scripts' );
 add_theme_support('post-thumbnails');
@@ -85,19 +87,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'back
     'section'    => 'cd_colors',
     'settings'   => 'background_color',
 ) ) );
-$wp_customize->add_section( 'Text' , array(
-    'title'      => 'Text',
-    'priority'   => 140,
-) );
-$wp_customize->add_setting( 'Text' , array(
-    'default'     => '',
-    'transport'   => 'postMessage',
-) );
-$wp_customize->add_control( 'Text', array(
-    'label' => 'Text',
-'section'   => 'Text',
-'type'   => 'text',
-) );
+
     $wp_customize->selective_refresh->add_partial( 
   'wp_sociologijos', array(
     'selector' => '.site-description',
@@ -108,27 +98,71 @@ $wp_customize->add_control( 'Text', array(
     function render_copyright(){
         return get_theme_mod('Text');
     }
-$wp_customize->add_section( 'photo' , array(
-    'title'      => 'Apie image',
+$wp_customize->add_section( 'front-gallery' , array(
+    'title'      => 'Galerijos paveikslai',
     'priority'   => 130,
 ) );
-$wp_customize->add_setting( 'photo' , array(
+$wp_customize->add_setting( 'front-gallery-s-1' , array(
     'default'     => '',
-    'transport'   => 'postMessage',
+    'transport'   => 'refresh',
 ) );
 $wp_customize->add_control(
        new WP_Customize_Image_Control(
            $wp_customize,
-           'photo',
+           'front-gallery-s-1',
            array(
-               'label'      => __( 'Upload a photo', 'wp_sociologijos' ),
-               'section'    => 'photo',
-               'settings'   => 'photo',
+               'label'      => __( 'Įkelti nuotrauka kairė viršus', 'wp_sociologijos' ),
+               'section'    => 'front-gallery',
+               'settings'   => 'front-gallery-s-1',
                'context'    => 'your_setting_context' 
            )
        )
    );
+$wp_customize->add_setting( 'front-gallery-s-2' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+) );
+$wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'front-gallery-s-2',
+           array(
+               'label'      => __( 'Įkelti nuotrauka kairė apačia', 'wp_sociologijos' ),
+               'section'    => 'front-gallery',
+               'settings'   => 'front-gallery-s-2',
+               'context'    => 'your_setting_context' 
+           )
+       )
+   );
+$wp_customize->add_setting( 'front-gallery-s-3' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+) );
+$wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'front-gallery-s-3',
+           array(
+               'label'      => __( 'Įkelti nuotrauka dešinė', 'wp_sociologijos' ),
+               'section'    => 'front-gallery',
+               'settings'   => 'front-gallery-s-3',
+               'context'    => 'your_setting_context' 
+           )
+       )
+   );
+
 }
+
+$args = array(
+  'name' => 'Main Sidebar',
+  'id' => 'sidebar-1',
+  'description' => 'Main widget area',
+  'before_widget' => '<li id="%1$s" class="widget %2$s">',
+  'after_widget'  => '</li>',
+  'before_title'  => '<h2 class="widgettitle">',
+  'after_title'   => '</h2>',
+);
+register_sidebar( $args );
 
 
 function wpdocs_codex_custom_init() {
