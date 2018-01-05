@@ -130,7 +130,7 @@ $wp_customize->add_control(
    );
 }
 
-<<<<<<< HEAD
+
 function wpdocs_codex_custom_init() {
     $args = array(
         'public' => true,
@@ -139,7 +139,7 @@ function wpdocs_codex_custom_init() {
     register_post_type( 'renginiai', $args );
 }
 add_action( 'init', 'wpdocs_codex_custom_init' );
-=======
+
 function renginiai_setup_post_type() {
     $args = array(
         'public'    => true,
@@ -150,4 +150,3 @@ function renginiai_setup_post_type() {
     register_post_type( 'renginiai', $args );
 }
 add_action( 'init', 'renginiai_setup_post_type' );
->>>>>>> 3451fcb19c260f4aacc329bf6ba9a3e722a8e1d6
