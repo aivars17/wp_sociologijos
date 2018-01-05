@@ -1,6 +1,10 @@
 <?php /* Template name: Studijos */ ?>
 <?php get_header('single'); ?>
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div><?php the_content(); ?></div>
+<?php endwhile; endif; ?>
+
     <section class="study">
 
       <div class="Container">
