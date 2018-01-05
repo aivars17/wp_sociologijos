@@ -150,7 +150,4 @@ function renginiai_setup_post_type() {
     register_post_type( 'renginiai', $args );
 }
 add_action( 'init', 'renginiai_setup_post_type' );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4df93b6e2e354d3a7a290f14ded834a327618552
