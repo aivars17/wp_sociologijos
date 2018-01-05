@@ -8,20 +8,30 @@
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <div class="rotated-about">
-          <h1>APIE<i class="fa fa-circle" aria-hidden="true"></i></h1>
-        </div>
-        <div class="video-holder">
-          <img class="img-fluid" src="<?php if (get_theme_mod( 'photo' )) : echo get_theme_mod( 'photo'); else: echo get_template_directory_uri().'/assets/img/yDot.png'; endif; ?>"  alt="" data-toggle="modal" data-target=".video-modal">
-        </div>
-        </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="about-text_index">
-           <p><?php echo get_theme_mod('Text'); ?></p>
-        </div>
-        <div class="about-more">
-          <a href="">Skaityti daugiau <span>>></span></a>
-        </div>
-      </div>
+          <?php $apie = new WP_Query( 'page_id=15' ); ?>
+          <?php 
+            if ( have_posts() ) {
+              while ( $apie->have_posts() ) {
+                $apie->the_post(); ?>
+                 <h1><?php the_title(); ?><i class="fa fa-circle" aria-hidden="true"></i></h1>
+                    </div>
+                    <div class="video-holder">
+                      <?php the_post_thumbnail('post-thumbnail',['class'=>'img-fluid']); ?>
+                    </div>
+                    </div>
+                  <div class="col-lg-6 col-md-12">
+                    <div class="about-text_index">
+                       <p><?php the_content(); ?></p>
+                    </div>
+                    <div class="about-more">
+                      <a href="<?php echo get_permalink();?>">Skaityti daugiau <span>>></span></a>
+                    </div>
+                  </div>
+                  <?php 
+              } // end while
+            } // end if
+            ?>
+         
 
     </div>
 
